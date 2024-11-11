@@ -2,7 +2,7 @@
   <b>Tomas Baidal</b>
 </h1>
 
-Heya! I'm Tomas Baidal, an Analytics Engineer living in Berlin, Germany.
+Heya! I'm Tomas Baidal, Analytics Engineer living in Berlin, Germany.
 <br>
 <p>
 <br>
