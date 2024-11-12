@@ -32,10 +32,10 @@ class TomasBaidal():
       "data_transformation": ["dbt"],
       "orchestration": ["Airflow", "Kafka"],
       "data_processing": ["Spark", "Hadoop"],
-      "cloud_services": ["AWS"],
+      "cloud_services": {"AWS": ["RDS", "DynamoDB". "Redshift", "Athena", "Glue", "SageMaker", "Lambda", "API Gateway", "CloudFormation"]},
       "data_modelling": ["Data Modelling", "ELT", "ETL"],
       "development_tools": ["git", "Docker", "Postman"],
-      "web_frameworks": ["FastAPI", "Streamlit"],
+      "web_frameworks": ["FastAPI", "Streamlit", "Dash Python"],
       "APIs": ["API development", "FastAPI", "Postman"]
     }
   
