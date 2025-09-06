@@ -23,7 +23,8 @@ class TomasBaidal():
     self.username = "tbs89"
     self.location = "Berlin, Germany"
     self.role = "Analytics Engineer"
-    self.current_company = "Trade Republic Bank"
+    self.current_company = "MILES Mobility GmbH"
+    self.previous_company = "Trade Republic Bank"
     self.education = "Bachelor of Science - BS, Applied Data Science - Universitat Oberta de Catalunya"
     self.values = ["Continuous Improvement", "Collaboration", "Team Work", "Problem Solving"]
     self.stack = {
@@ -50,6 +51,7 @@ if __name__ == '__main__':
   <img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white">
   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
   <img src="https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=fff&style=flat-square">
+  <img src="https://img.shields.io/badge/Terraform-844FBA?logo=terraform&logoColor=fff)">
   <br> <br>
   <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white">
   <img src="https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)">
