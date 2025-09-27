@@ -2,7 +2,12 @@
   <b>Tomas Baidal</b>
 </h1>
 
-Heya! I'm Tomas Baidal, Analytics Engineer living in Berlin, Germany.
+Heya! I'm Tomas Baidal, Analytics Engineer living in Berlin, Germany. I am currently working at MILES Mobility, where I am responsible for data ingestion, integration, governance, and modeling.
+
+Since September 1st, I’ve been working at MiILES and therefore using GitLab, so my activity on GitHub has decreased a bit.
+
+You can visit my GitLab profile [HERE](https://gitlab.com/tomas.baidal).
+
 <br>
 <p>
 <br>
