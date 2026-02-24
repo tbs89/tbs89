@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomas Baidal — Analytics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #1a1a1a;
+      --muted: #888;
+      --accent: #c94a2b;
+      --border: #ddd;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.7;
+      padding: 80px 24px 120px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 52px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .location {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Bio */
+    .bio {
+      margin-bottom: 52px;
+      font-weight: 300;
+      color: #333;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Experience entries */
+    .entry {
+      margin-bottom: 32px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .entry-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .entry-company {
+      font-style: italic;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .entry-desc {
+      font-weight: 300;
+      font-size: 0.97rem;
+      color: #444;
+    }
+
+    .stack {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 32px;
+    }
+
+    .skill-group dt {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .skill-group dd {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #333;
+    }
+
+    /* Education */
+    .edu-title {
+      font-weight: 600;
+    }
+
+    .edu-school {
+      font-style: italic;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .edu-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 72px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 540px) {
+      body { font-size: 17px; padding: 48px 20px 80px; }
+      h1 { font-size: 2rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .entry-header { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Tomas Baidal</h1>
+    <p class="location">Berlin, Germany</p>
+    <nav class="links">
+      <a href="https://www.linkedin.com/in/tomas-b-s" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tbs89" target="_blank">GitHub</a>
+      <a href="https://gitlab.com/tomas.baidal" target="_blank">GitLab</a>
+    </nav>
+  </header>
+
+  <p class="bio">
+    Analytics Engineer focused on data ingestion, integration, governance, and modeling.
+    Currently building modern data infrastructure at MILES Mobility in Berlin.
+    Previously at Trade Republic Bank. Studying Applied Data Science at UOC.
+  </p>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Analytics Engineer</span>
+        <span class="entry-period">Sep 2024 — Present</span>
+      </div>
+      <div class="entry-company">MILES Mobility GmbH — Berlin, DE</div>
+      <p class="entry-desc">Responsible for data ingestion, integration, governance, and modeling. Modernizing data infrastructure, migrating from MWAA to Temporal for workflow orchestration, and implementing custom data pipelines with dlt.</p>
+      <p class="stack">Snowflake · dbt · Airflow · Temporal · AWS · Python · OpenMetadata</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Data / Analytics Engineer</span>
+        <span class="entry-period">— 2024</span>
+      </div>
+      <div class="entry-company">Trade Republic Bank GmbH — Berlin, DE</div>
+      <p class="entry-desc">Built and maintained data pipelines and analytics infrastructure for one of Europe's largest neobrokers.</p>
+      <p class="stack">Snowflake · dbt · Airflow · AWS · Python · Kafka</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <dl class="skills-grid">
+      <div class="skill-group">
+        <dt>Languages</dt>
+        <dd>Python · SQL · R</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Data Warehousing</dt>
+        <dd>Snowflake · PostgreSQL · MongoDB</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Transformation</dt>
+        <dd>dbt · Spark · Hadoop</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Orchestration</dt>
+        <dd>Airflow · Temporal · Kafka</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Cloud</dt>
+        <dd>AWS (S3, Lambda, Glue, SageMaker, EKS)</dd>
+      </div>
+      <div class="skill-group">
+        <dt>DevOps</dt>
+        <dd>Docker · Terraform · Git · CI/CD</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Web / APIs</dt>
+        <dd>FastAPI · Streamlit · Dash · Postman</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Data Catalog</dt>
+        <dd>OpenMetadata · Metabase · Superset</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="edu-title">Bachelor of Science — Applied Data Science</span>
+        <span class="entry-period">In progress</span>
+      </div>
+      <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
+    </div>
+  </section>
+
+  <footer>
+    tomas baidal · berlin · updated 2025
+  </footer>
+
+</main>
+</body>
+</html>
