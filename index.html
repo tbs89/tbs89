@@ -109,6 +109,48 @@
       margin-bottom: 32px;
     }
 
+    /* Company group (multiple roles at same company) */
+    .company-group {
+      margin-bottom: 36px;
+    }
+
+    .company-group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .company-group-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .company-group-location {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .company-group-roles {
+      padding-left: 20px;
+      border-left: 2px solid var(--border);
+    }
+
+    .sub-entry {
+      margin-bottom: 28px;
+    }
+
+    .sub-entry:last-child {
+      margin-bottom: 0;
+    }
+
     .entry-header {
       display: flex;
       justify-content: space-between;
@@ -141,6 +183,28 @@
       font-weight: 300;
       font-size: 0.97rem;
       color: #444;
+    }
+
+    .entry-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+    }
+
+    .entry-bullets li {
+      font-weight: 300;
+      font-size: 0.97rem;
+      color: #444;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    .entry-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
     }
 
     .stack {
@@ -237,28 +301,51 @@
         <span class="entry-period">Sep 2025 — Present</span>
       </div>
       <div class="entry-company">MILES Mobility GmbH — Berlin, DE</div>
-      <p class="entry-desc">Building Miles' data infrastructure from the ground up. Handling the full stack: data engineering pipelines, DevOps for the data platform, orchestration with Temporal, and modeling with dbt and Snowflake. Migrated legacy systems to modern architecture, set up Airbyte OSS and custom ingestion, deployed services on AWS EKS (Metabase, OpenMetadata), and established the foundational data models powering analytics across the company. Built API gateways on top of Temporal workflows to develop agentic systems like internal chatbots and AI automated workflows.</p>
+      <ul class="entry-bullets">
+        <li>Designed and built the company's data infrastructure end-to-end, covering ingestion, transformation, modeling, and governance from scratch.</li>
+        <li>Migrated legacy orchestration to Temporal OSS on AWS EKS; replaced Airbyte Cloud with a self-hosted setup and custom dlt-based connectors, reducing tooling costs significantly.</li>
+        <li>Implemented core dimensional models in dbt and Snowflake that serve as the single source of truth for company-wide analytics.</li>
+        <li>Deployed and maintained internal platforms on Kubernetes (Metabase, OpenMetadata, Grafana, Prometheus).</li>
+        <li>Built agentic systems on top of Temporal workflows, including an internal AI chatbot for the claims team using RAG architecture and automated data pipelines with LLM-powered processing.</li>
+      </ul>
       <p class="stack">Snowflake · dbt · Temporal · Airflow · Airbyte · AWS EKS · Python · OpenMetadata</p>
     </div>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Analytics Engineer — Operations & CX</span>
-        <span class="entry-period">Jan 2024 — Sep 2025</span>
+    <div class="company-group">
+      <div class="company-group-header">
+        <span class="company-group-name">Trade Republic Bank GmbH</span>
+        <span class="company-group-location">Berlin, DE · Jan 2022 — Sep 2025</span>
       </div>
-      <div class="entry-company">Trade Republic Bank GmbH — Berlin, DE</div>
-      <p class="entry-desc">Built and optimized data pipelines to power Product Operations at scale. Led the technical ownership of Zendesk, including platform architecture, custom app development, and advanced workflow automation using Zendesk Integration Services (ZIS). Managed API integrations with tools like NextMatter to ensure clean, reliable data and seamless process automation.</p>
-      <p class="stack">AWS · Airflow · dbt · Snowflake · Looker · Metabase · Zendesk ZIS · Python</p>
-    </div>
+      <div class="company-group-roles">
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Platforms & Applications Specialist</span>
-        <span class="entry-period">Jan 2022 — Jan 2024</span>
+        <div class="entry sub-entry">
+          <div class="entry-header">
+            <span class="entry-title">Analytics Engineer — Operations & CX</span>
+            <span class="entry-period">Jan 2024 — Sep 2025</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Designed and maintained ELT pipelines on AWS and Airflow to support Product Operations analytics at scale across millions of customers.</li>
+            <li>Led technical ownership of Zendesk: platform architecture, custom app development, and advanced workflow automation via Zendesk Integration Services (ZIS).</li>
+            <li>Built dbt models in Snowflake covering customer care KPIs, agent performance, and operational metrics surfaced through Looker and Metabase.</li>
+            <li>Integrated third-party platforms (NextMatter, AI chatbot tools) via REST APIs to automate operational processes and reduce manual workload.</li>
+          </ul>
+          <p class="stack">AWS · Airflow · dbt · Snowflake · Looker · Metabase · Zendesk ZIS · Python</p>
+        </div>
+
+        <div class="entry sub-entry">
+          <div class="entry-header">
+            <span class="entry-title">Platforms & Applications Specialist</span>
+            <span class="entry-period">Jan 2022 — Jan 2024</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Owned the Customer Service technology stack, including Zendesk administration, UltimateAI configuration, and API integrations with third-party tools.</li>
+            <li>Automated repetitive support workflows and built custom Zendesk apps to improve agent efficiency and data quality.</li>
+            <li>Acted as the technical bridge between the CX team and engineering, translating operational needs into scalable platform solutions.</li>
+          </ul>
+          <p class="stack">Zendesk · UltimateAI · API integrations · Python</p>
+        </div>
+
       </div>
-      <div class="entry-company">Trade Republic Bank GmbH — Berlin, DE</div>
-      <p class="entry-desc">Owned all Customer Service technology — Zendesk, UltimateAI, API integrations, and third-party tools. Automated processes, managed platform reliability, and kept the support team equipped with the best tooling.</p>
-      <p class="stack">Zendesk · UltimateAI · API integrations · Python</p>
     </div>
   </section>
 
@@ -307,11 +394,38 @@
         <span class="edu-title">Bachelor of Science — Applied Data Science</span>
       </div>
       <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
+      <p class="entry-desc" style="margin-top: 6px;">Covering the full data science stack: statistics & probability, machine learning, deep learning, NLP, data mining, and big data. Strong foundations in Python, R, SQL, and linear algebra, with applied coursework in customer analytics, A/B testing, and multivariate analysis.</p>
     </div>
   </section>
 
+  <section>
+    <h2>Volunteer</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Data Analytics Instructor</span>
+        <span class="entry-period">Nov 2023 — Jun 2024</span>
+      </div>
+      <div class="entry-company">ReDI School of Digital Integration</div>
+      <p class="entry-desc">Taught Python, Statistics, and Machine Learning to newcomers and locals as part of ReDI's free tech education program — a non-profit focused on digital skills and job integration for underrepresented communities in Germany.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <dl class="skills-grid">
+      <div class="skill-group">
+        <dt>Native</dt>
+        <dd>Spanish · Catalan</dd>
+      </div>
+      <div class="skill-group">
+        <dt>Professional</dt>
+        <dd>English · German (C1)</dd>
+      </div>
+    </dl>
+  </section>
+
   <footer>
-    tomas baidal · berlin · updated 2025
+    tomas baidal · berlin · updated 2026
   </footer>
 
 </main>
