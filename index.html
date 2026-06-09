@@ -281,6 +281,43 @@
       opacity: 0.85;
     }
 
+    /* Online CV banner */
+    .cv-online-banner {
+      display: block;
+      text-align: center;
+      padding: 16px 24px;
+      margin-bottom: 44px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      border-radius: 3px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .cv-online-banner:hover {
+      background: #a83d24;
+      transform: translateY(-1px);
+    }
+
+    .cv-online-banner strong {
+      display: block;
+      font-weight: 400;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      opacity: 0.92;
+    }
+
+    .cv-online-banner .cv-url {
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      padding-bottom: 1px;
+    }
+
     /* Footer */
     footer {
       margin-top: 72px;
@@ -298,6 +335,83 @@
       .skills-grid { grid-template-columns: 1fr; }
       .entry-header { flex-direction: column; gap: 2px; }
     }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm 16mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        opacity: 1 !important;
+        animation: none !important;
+        padding: 0 !important;
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      main {
+        max-width: 100%;
+      }
+
+      header {
+        margin-bottom: 28px;
+      }
+
+      .bio,
+      section {
+        margin-bottom: 28px;
+      }
+
+      .entry,
+      .sub-entry,
+      .company-group,
+      .skill-group {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .company-group-header {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .entry-bullets li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .cv-online-banner {
+        background: var(--accent) !important;
+        color: #fff !important;
+        margin-bottom: 24px;
+        padding: 14px 18px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .cv-online-banner .cv-url {
+        border-bottom-color: rgba(255, 255, 255, 0.6);
+      }
+
+      .links a {
+        color: var(--text) !important;
+      }
+
+      footer {
+        margin-top: 36px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -313,6 +427,11 @@
       <a href="https://gitlab.com/tomas.baidal" target="_blank">GitLab</a>
     </nav>
   </header>
+
+  <a class="cv-online-banner" href="https://tbs89.github.io/tbs89/" target="_blank" rel="noopener noreferrer">
+    <strong>View interactive CV online</strong>
+    <span class="cv-url">tbs89.github.io/tbs89 ↗</span>
+  </a>
 
   <p class="bio">
     Data Platform Engineer who owns ingestion, warehouse, transformation, BI, scheduling, and governance end-to-end.
