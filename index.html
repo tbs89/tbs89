@@ -254,6 +254,25 @@
       color: var(--muted);
     }
 
+    /* Certifications */
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .cert-badge {
+      display: block;
+      height: 88px;
+      width: auto;
+      transition: opacity 0.2s;
+    }
+
+    a.cert-link:hover .cert-badge {
+      opacity: 0.85;
+    }
+
     /* Footer */
     footer {
       margin-top: 72px;
@@ -288,27 +307,32 @@
 
   <p class="bio">
     Analytics Engineer focused on data ingestion, integration, governance, and modeling.
-    Currently building modern data infrastructure at MILES Mobility in Berlin.
-    Previously at Trade Republic Bank. Studying Applied Data Science at UOC.
+    Currently owning the data platform at MILES Mobility in Berlin.
+    Previously at Trade Republic Bank. Bachelor's in Applied Data Science from UOC.
   </p>
 
   <section>
     <h2>Experience</h2>
 
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Analytics Engineer</span>
-        <span class="entry-period">Sep 2025 — Present</span>
+    <div class="company-group">
+      <div class="company-group-header">
+        <span class="company-group-name">MILES Mobility GmbH</span>
+        <span class="company-group-location">Berlin, DE · Sep 2025 — Present</span>
       </div>
-      <div class="entry-company">MILES Mobility GmbH — Berlin, DE</div>
-      <ul class="entry-bullets">
-        <li>Designed and built the company's data infrastructure end-to-end, covering ingestion, transformation, modeling, and governance from scratch.</li>
-        <li>Migrated legacy orchestration to Temporal OSS on AWS EKS; replaced Airbyte Cloud with a self-hosted setup and custom dlt-based connectors, reducing tooling costs significantly.</li>
-        <li>Implemented core dimensional models in dbt and Snowflake that serve as the single source of truth for company-wide analytics.</li>
-        <li>Deployed and maintained internal platforms on Kubernetes (Metabase, OpenMetadata, Grafana, Prometheus).</li>
-        <li>Built agentic systems on top of Temporal workflows, including an internal AI chatbot for the claims team using RAG architecture and automated data pipelines with LLM-powered processing.</li>
-      </ul>
-      <p class="stack">Snowflake · dbt · Temporal · Airflow · Airbyte · AWS EKS · Python · OpenMetadata</p>
+      <div class="company-group-roles">
+        <div class="entry sub-entry">
+          <div class="entry-header">
+            <span class="entry-title">Analytics Engineer — Data Platform</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Own MILES' data platform from the ground up—data engineering, analytics engineering, and platform work across the full stack.</li>
+            <li>Handle pipelines, GitLab-based DevOps for the data platform, orchestration with Temporal, LLM observability with Langfuse, and modeling with dbt, Cube, and Snowflake.</li>
+            <li>Migrated legacy systems to a modern architecture; set up Airbyte OSS and custom ingestion; deployed services on AWS EKS (Metabase, OpenMetadata, Cube, Temporal, Langfuse, and more).</li>
+            <li>Established foundational data models that power analytics company-wide; built FastAPI gateways on Temporal workflows to automate processes and develop agentic systems such as internal chatbots and AI-driven workflows.</li>
+          </ul>
+          <p class="stack">Snowflake · dbt · Cube · Temporal · Airflow · Airbyte · AWS EKS · Python · Langfuse · GitLab · FastAPI · OpenMetadata</p>
+        </div>
+      </div>
     </div>
 
     <div class="company-group">
@@ -321,7 +345,7 @@
         <div class="entry sub-entry">
           <div class="entry-header">
             <span class="entry-title">Analytics Engineer — Operations & CX</span>
-            <span class="entry-period">Jan 2024 — Sep 2025</span>
+            <span class="entry-period">Jan 2023 — Sep 2025</span>
           </div>
           <ul class="entry-bullets">
             <li>Designed and maintained ELT pipelines on AWS and Airflow to support Product Operations analytics at scale across millions of customers.</li>
@@ -335,7 +359,7 @@
         <div class="entry sub-entry">
           <div class="entry-header">
             <span class="entry-title">Platforms & Applications Specialist</span>
-            <span class="entry-period">Jan 2022 — Jan 2024</span>
+            <span class="entry-period">Jan 2022 — Jan 2023</span>
           </div>
           <ul class="entry-bullets">
             <li>Owned the Customer Service technology stack, including Zendesk administration, UltimateAI configuration, and API integrations with third-party tools.</li>
@@ -388,13 +412,27 @@
   </section>
 
   <section>
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <a class="cert-link" href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener noreferrer" title="AWS Certified Solutions Architect – Associate">
+        <img
+          class="cert-badge"
+          src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.634f8b21c2ee1bd9f155344e77776328bb63d17b.png"
+          alt="AWS Certified Solutions Architect – Associate"
+          loading="lazy"
+        >
+      </a>
+    </div>
+  </section>
+
+  <section>
     <h2>Education</h2>
     <div class="entry">
       <div class="entry-header">
         <span class="edu-title">Bachelor of Science — Applied Data Science</span>
       </div>
       <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
-      <p class="entry-desc" style="margin-top: 6px;">Covering the full data science stack: statistics & probability, machine learning, deep learning, NLP, data mining, and big data. Strong foundations in Python, R, SQL, and linear algebra, with applied coursework in customer analytics, A/B testing, and multivariate analysis.</p>
+      <p class="entry-desc" style="margin-top: 6px;">Graduated with a full data science foundation: statistics & probability, machine learning, deep learning, NLP, data mining, and big data. Strong grounding in Python, R, SQL, and linear algebra, with applied coursework in customer analytics, A/B testing, and multivariate analysis.</p>
     </div>
   </section>
 
