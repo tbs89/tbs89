@@ -272,7 +272,7 @@
 
     .cert-badge {
       display: block;
-      height: 88px;
+      height: 64px;
       width: auto;
       transition: opacity 0.2s;
     }
@@ -315,9 +315,9 @@
   </header>
 
   <p class="bio">
-    Analytics Engineer focused on data ingestion, integration, governance, and modeling.
-    Currently owning the data platform at MILES Mobility in Berlin.
-    Previously at Trade Republic Bank. Bachelor's in Applied Data Science from UOC.
+    Data Platform Engineer who owns ingestion, warehouse, transformation, BI, scheduling, and governance end-to-end.
+    Currently rebuilding MILES Mobility's platform in Berlin—solo data engineer on a small team, shipping with Terraform, dbt, and observability built in.
+    Previously scaled analytics infrastructure at Trade Republic Bank. Bachelor's in Applied Data Science from UOC.
   </p>
 
   <section>
@@ -334,12 +334,13 @@
             <span class="entry-title">Data Analytics Engineer</span>
           </div>
           <ul class="entry-bullets">
-            <li>Own MILES' data platform from the ground up—data engineering, analytics engineering, and platform work across the full stack.</li>
-            <li>Handle pipelines, GitLab-based DevOps for the data platform, orchestration with Temporal, LLM observability with Langfuse, and modeling with dbt, Cube, and Snowflake.</li>
-            <li>Migrated legacy systems to a modern architecture; set up Airbyte OSS and custom ingestion; deployed services on AWS EKS (Metabase, OpenMetadata, Cube, Temporal, Langfuse, and more).</li>
-            <li>Established foundational data models that power analytics company-wide; built FastAPI gateways on Temporal workflows to automate processes and develop agentic systems such as internal chatbots and AI-driven workflows.</li>
+            <li>Own the data platform end-to-end: ingestion, warehouse, transformation tooling, BI, scheduling, observability, and governance—as the sole data engineer on the team.</li>
+            <li>Led rearchitecture of AWS and Snowflake with Terraform (IaC); migrated legacy systems, deployed Airbyte OSS and custom connectors, and run platform services on EKS (Metabase, OpenMetadata, Cube, Temporal, Langfuse).</li>
+            <li>Built the governed analytics layer: dbt models with tests, Cube as semantic layer, OpenMetadata for lineage and cataloguing, and Metabase for BI—so metrics are reproducible and auditable.</li>
+            <li>Orchestration with Temporal and GitLab CI/CD; Kafka for event-driven ingestion where stream processing fits the use case.</li>
+            <li>Applied AI selectively on the platform itself—Langfuse for LLM observability, automated triage workflows, and internal agentic tools—where tasks are repeatable and verifiable.</li>
           </ul>
-          <p class="stack">Snowflake · dbt · Cube · Temporal · Airflow · Airbyte · AWS EKS · Python · Langfuse · GitLab · FastAPI · OpenMetadata</p>
+          <p class="stack">Snowflake · dbt · Cube · Terraform · Kafka · Temporal · Airflow · Airbyte · AWS EKS · Metabase · OpenMetadata · Langfuse · GitLab CI/CD · Python</p>
         </div>
       </div>
     </div>
@@ -357,10 +358,10 @@
             <span class="entry-period">Jan 2023 — Sep 2025</span>
           </div>
           <ul class="entry-bullets">
-            <li>Designed and maintained ELT pipelines on AWS and Airflow to support Product Operations analytics at scale across millions of customers.</li>
-            <li>Led technical ownership of Zendesk: platform architecture, custom app development, and advanced workflow automation via Zendesk Integration Services (ZIS).</li>
-            <li>Built dbt models in Snowflake covering customer care KPIs, agent performance, and operational metrics surfaced through Looker and Metabase.</li>
-            <li>Integrated third-party platforms (NextMatter, AI chatbot tools) via REST APIs to automate operational processes and reduce manual workload.</li>
+            <li>Designed and maintained ELT pipelines on AWS and Airflow at scale across millions of customers—batch ingestion into Snowflake with dbt transformations and tested models.</li>
+            <li>Built operational datasets in dbt covering customer care KPIs, agent performance, and metrics surfaced through Looker and Metabase.</li>
+            <li>Led technical ownership of Zendesk: platform architecture, custom app development, and workflow automation via Zendesk Integration Services (ZIS).</li>
+            <li>Integrated third-party platforms (NextMatter, AI chatbot tools) via REST APIs; partnered with product engineering on event data and operational automation.</li>
           </ul>
           <p class="stack">AWS · Airflow · dbt · Snowflake · Looker · Metabase · Zendesk ZIS · Python</p>
         </div>
@@ -387,35 +388,35 @@
     <dl class="skills-grid">
       <div class="skill-group">
         <dt>Languages</dt>
-        <dd>Python · SQL · R</dd>
+        <dd>Python · SQL · R · Java</dd>
       </div>
       <div class="skill-group">
-        <dt>Data Warehousing</dt>
-        <dd>Snowflake · PostgreSQL · MongoDB</dd>
+        <dt>Warehousing & OLAP</dt>
+        <dd>Snowflake · Redshift · PostgreSQL · MongoDB</dd>
       </div>
       <div class="skill-group">
         <dt>Transformation</dt>
         <dd>dbt · Spark · Hadoop</dd>
       </div>
       <div class="skill-group">
-        <dt>Orchestration</dt>
-        <dd>Airflow · Temporal · Kafka</dd>
+        <dt>Stream & Orchestration</dt>
+        <dd>Kafka · Airflow · Temporal · GitHub Actions</dd>
       </div>
       <div class="skill-group">
-        <dt>Cloud</dt>
-        <dd>AWS (S3, Lambda, Glue, SageMaker, EKS)</dd>
+        <dt>Cloud & IaC</dt>
+        <dd>AWS (EKS, S3, Lambda, Glue) · Terraform</dd>
       </div>
       <div class="skill-group">
         <dt>DevOps</dt>
-        <dd>Docker · Terraform · Git · CI/CD</dd>
+        <dd>Docker · GitLab CI/CD · Git · Terraform</dd>
       </div>
       <div class="skill-group">
-        <dt>Web / APIs</dt>
-        <dd>FastAPI · Streamlit · Dash · Postman</dd>
+        <dt>BI & Semantic Layer</dt>
+        <dd>Metabase · Cube · Looker · Superset</dd>
       </div>
       <div class="skill-group">
-        <dt>Data Catalog</dt>
-        <dd>OpenMetadata · Metabase · Superset</dd>
+        <dt>Governance & Observability</dt>
+        <dd>OpenMetadata · data contracts · lineage · Langfuse</dd>
       </div>
     </dl>
   </section>
@@ -423,10 +424,18 @@
   <section>
     <h2>Certifications</h2>
     <div class="cert-list">
+      <a class="cert-link" href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer" title="AWS Certified Cloud Practitioner">
+        <img
+          class="cert-badge"
+          src="aws2.png"
+          alt="AWS Certified Cloud Practitioner"
+          loading="lazy"
+        >
+      </a>
       <a class="cert-link" href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener noreferrer" title="AWS Certified Solutions Architect – Associate">
         <img
           class="cert-badge"
-          src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.634f8b21c2ee1bd9f155344e77776328bb63d17b.png"
+          src="aws.png"
           alt="AWS Certified Solutions Architect – Associate"
           loading="lazy"
         >
@@ -441,7 +450,7 @@
         <span class="edu-title">Bachelor of Science — Applied Data Science</span>
       </div>
       <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
-      <p class="entry-desc" style="margin-top: 6px;">Graduated with a full data science foundation: statistics & probability, machine learning, deep learning, NLP, data mining, and big data. Strong grounding in Python, R, SQL, and linear algebra, with applied coursework in customer analytics, A/B testing, and multivariate analysis.</p>
+      <p class="entry-desc" style="margin-top: 6px;">Graduated with foundations across statistics, probability, machine learning, deep learning, NLP, data mining, and big data. Coursework in Java, Python, R, SQL, Hadoop, Spark, OLAP, and linear algebra, with applied projects in customer analytics, A/B testing, multivariate analysis, and distributed data processing.</p>
     </div>
   </section>
 
