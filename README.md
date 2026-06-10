@@ -8,6 +8,8 @@ Since September 1st, I’ve been working at MiILES and therefore using GitLab, s
 
 You can visit my GitLab profile [HERE](https://gitlab.com/tomas.baidal).
 
+**If you are recruiter, you can see my CV [HERE](https://tbs89.github.io/tbs89/).**
+
 <br>
 <p>
 <br>
